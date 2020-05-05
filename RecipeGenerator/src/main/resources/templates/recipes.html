@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="shortcut icon" href="https://s3.amazonaws.com/ionic-marketplace/soillona-chefs-recipes-app-with-backend/icon.png"/>
+<title>Recipes</title>
+</head>
+<body>
+    <h2>Search by groceries</h2>
+    <form action="#" th:action="@{/recipes}" th:object="${Recipes}" method="post">
+    	<p>Separate by ","</p>
+        <p><input type="text" th:field="*{content}" /></p>
+        <p>Select to maximize used ingredients or minimize missing ingredients</p>
+		<select th:field="*{option}">
+        <option value="1">Maximize used ingredients</option>
+        <option value="2">Minimize missing ingredients</option>
+		</select>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
