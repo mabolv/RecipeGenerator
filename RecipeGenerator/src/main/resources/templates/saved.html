@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recipe saved</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="https://s3.amazonaws.com/ionic-marketplace/soillona-chefs-recipeGenerator-app-with-backend/icon.png"/>
+</head>
+<body>
+<a href="/index">Home</a><a>	&nbsp;&nbsp;</a><a href="/recipes">Search by ingredients</a><a> &nbsp;&nbsp;</a><a href="/generate">Generate recipes</a><a> &nbsp;&nbsp;</a><a href="/savedrecipes">Saved recipes</a><a> &nbsp;&nbsp;</a><a href="/logout">Log out</a>
+<h2>Saved recipes</h2>
+
+<font color="red"><b><a th:text="${editrecipe.new9}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id9})}" th:text="${editrecipe.title9}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id9},name=${editrecipe.title9})}" th:text="${editrecipe.delete9}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new8}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id8})}" th:text="${editrecipe.title8}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id8},name=${editrecipe.title8})}" th:text="${editrecipe.delete8}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new7}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id7})}" th:text="${editrecipe.title7}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id7},name=${editrecipe.title7})}" th:text="${editrecipe.delete7}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new6}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id6})}" th:text="${editrecipe.title6}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id6},name=${editrecipe.title6})}" th:text="${editrecipe.delete6}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new5}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id5})}" th:text="${editrecipe.title5}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id5},name=${editrecipe.title5})}" th:text="${editrecipe.delete5}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new4}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id4})}" th:text="${editrecipe.title4}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id4},name=${editrecipe.title4})}" th:text="${editrecipe.delete4}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new3}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id3})}" th:text="${editrecipe.title3}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id3},name=${editrecipe.title3})}" th:text="${editrecipe.delete3}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new2}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id2})}" th:text="${editrecipe.title2}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id2},name=${editrecipe.title2})}" th:text="${editrecipe.delete2}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new1}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id1})}" th:text="${editrecipe.title1}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id1},name=${editrecipe.title1})}" th:text="${editrecipe.delete1}"></a></h5>
+<font color="red"><b><a th:text="${editrecipe.new0}"></a></b></font>
+<h4><a th:href="@{'/recipesinfo'(id=${editrecipe.id0})}" th:text="${editrecipe.title0}"></a></h4>
+<h5><a th:href="@{'/deleterecipe'(id=${editrecipe.id0},name=${editrecipe.title0})}" th:text="${editrecipe.delete0}"></a></h5>
+
+<input onclick='javascript:window.history.back()' value='Go back' type='button' /><br>
+</body>
+</html>

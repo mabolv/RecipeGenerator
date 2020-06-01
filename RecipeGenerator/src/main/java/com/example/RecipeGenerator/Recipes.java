@@ -14,7 +14,6 @@ import org.json.JSONObject;
 
 public class Recipes {
 	
-
 	
     public void setOption(int option) throws IOException { 
     	this.option=option;	
@@ -22,7 +21,6 @@ public class Recipes {
 	
 	public void setContent(String content) throws IOException {
 		this.content=content;
-		
 	}
 	
     private int option;
@@ -267,9 +265,9 @@ public class Recipes {
       }
     
     
-
+//sökning på recept efter inmatade ingredienser
     public void execute() throws IOException { 
-
+    	try {
       System.setProperty("http.agent", "Firefox");
       content = content.replaceAll(" ", "%20");
       
@@ -282,6 +280,23 @@ public class Recipes {
       
       BufferedReader br = new BufferedReader(new InputStreamReader((con.getInputStream())));
       String output = "{results:"+br.readLine()+"}";
+      
+      
+      
+      
+
+      	
+      	JSONObject jsonobject = new JSONObject(output);
+      	
+      	JSONArray jsonarray = new JSONArray();
+        jsonarray = jsonobject.getJSONArray("results");
+      	
+      	jsonobject = jsonarray.getJSONObject(0);
+
+
+      
+      
+      
           
           JSONObject jsonobject0 = new JSONObject(output),
           			 jsonobject1 = new JSONObject(output),
@@ -405,6 +420,7 @@ public class Recipes {
 	          	int id11 = jsonobject11.getInt("id");
 	          	
 	          	
+	          	
 		        this.src0 = src0;
 		        this.src1 = src1;
 		        this.src2 = src2;
@@ -482,6 +498,13 @@ public class Recipes {
 		        this.id9 = id9;
 		        this.id10 = id10;
 		        this.id11 = id11;
+		        
+		        
+    	}
+    	catch(Exception e) {
+    		e.printStackTrace();
+    		content="Invalid search!";
+    	}
     }
 
     

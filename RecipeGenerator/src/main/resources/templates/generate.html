@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="shortcut icon" href="https://s3.amazonaws.com/ionic-marketplace/soillona-chefs-recipes-app-with-backend/icon.png"/>
+<title>RecipeGenerator</title>
+</head>
+<body>
+<a href="/index">Home</a><a>	&nbsp;&nbsp;</a><a href="/recipes">Search by ingredients</a><a> &nbsp;&nbsp;</a><a href="/generate">Generate recipes</a><a> &nbsp;&nbsp;</a><a href="/savedrecipes">Saved recipes</a><a> &nbsp;&nbsp;</a><a href="/logout">Log out</a>
+    <h2>Generate</h2>
+    <form action="#" th:action="@{/generate}" th:object="${RecipeGenerator}" method="post">
+    	<p>Select to generate recipes for 1 day or 1 week</p>
+		<select th:field="*{timeframe}">
+        <option value="week">Week</option>
+         <option value="day">Day</option>
+		</select>
+    
+    	<p>Select target calories per day</p>
+        <p><input type="text" th:field="*{calories}" /></p>
+        
+        <p>Select optional diet</p>
+		<select th:field="*{diet}">
+		<option value=""></option>
+        <option value="glutenfree">Glutenfree</option>
+        <option value="ketogenic">Ketogenic</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="lacto-vegetarian">Lacto-vegetarian</option>
+        <option value="ovo-vegetarian">Ovo-vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="pescetarian">Pescetarian</option>
+        <option value="paleo">Paleo</option>
+        <option value="primal">Primal</option>
+        <option value="whole30">Whole30</option>
+		</select>
+		
+		<p>Select ingredients to exclude, separate by ","</p>
+        <p><input type="text" th:field="*{exclude}" /></p>
+		
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

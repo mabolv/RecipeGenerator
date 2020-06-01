@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="shortcut icon" href="https://s3.amazonaws.com/ionic-marketplace/soillona-chefs-recipes-app-with-backend/icon.png"/>
+<title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+<form action="#" th:action="@{/login}" th:object="${Log}" method="post">
+<p>Username</p>
+<p><input type="text" th:field="*{user}" /></p>
+<p>Password</p>
+<p><input type="password" th:field="*{pass}" />
+<p><input type="submit" value="Submit" /></p>
+</form>
+<br>
+<a href="/register">Register new user</a>
+
+</body>
+</html>
